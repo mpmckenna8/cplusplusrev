@@ -1,0 +1,9 @@
+What is a use of having functions in your programs?
+
+Make code more modular
+
+Make code more confusing
+
+Increase the number of lines of code you have.
+
+You need more variables.
