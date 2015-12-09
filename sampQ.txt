@@ -1,0 +1,22 @@
+What is the first line of:
+
+int funq6(int b, int q);
+
+int main(){
+
+return 0;
+}
+
+888888
+
+Function Prototype
+
+888888
+
+parameter
+
+88888
+
+parabula
+
+!!!!!!!!
