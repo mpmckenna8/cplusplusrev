@@ -18,31 +18,30 @@ bool printintro();
 int quest(int qnum);
 
 // Good old main function
-
 int main()
 {
-    
+// This is where the number of questions is set and a number correct counter is
+// initialized.
+
     int qNum = 3;
     int correct = 0;
 
-    // Calling a function to print the intro and if the user 
+    // Calling a function to print the intro and if the user
     if(printintro()){
         return 0;
         }
 
     for(int i = 1; i <= qNum; i++){
-
         correct += quest(i);
-
     }
-
+// output end results of the test and give some simple feeback!
     cout << endl << endl;
     cout << "test complete!!!!" << endl;
 
     cout << "Total Number correct is " << correct << " out of " << qNum;
 
     if(correct == qNum){
-        
+
       cout << endl << "you win  go make robots do stuff" << endl;
     }
     else{
@@ -62,9 +61,11 @@ bool printintro(){
     cout << "Would you like to:" << endl;
     cout << "A:) Take a practice test. \n";
     cout << "B:) exit \n Make selection and press enter: ";
-
+// get the input from the menu, didn't clear the buffer hre so carful though
     cin >> goger;
-    cout << endl << endl;
+cin.clear();
+
+cout << endl << endl;
 
     if(toupper(goger) == 'A'){
         return false;
@@ -131,8 +132,12 @@ int quest(int qnum){
     cin >> response;
     cout << endl << endl;
     response = toupper(response);
+    // clear input buffer.
+  //  cin.clear();
+  cin.ignore(numeric_limits<streamsize>::max(),'\n');
     // Check answer and return 1 if correct, could move to another function,
     // especially if I want non A answers.
+
     if(response == 'A'){
         return 1;
     }
